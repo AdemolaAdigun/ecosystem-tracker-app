@@ -1,0 +1,60 @@
+{
+  "name": "2021",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "db:migrate": "sequelize db:migrate",
+    "db:migrate:undo": "sequelize db:migrate:undo:all",
+    "db:reset": "npm run db:migrate:undo && npm run db:migrate",
+    "db:seed": "sequelize db:seed:all",
+    "dev": "cross-env DEBUG=dev nodemon --exec babel-node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@babel/cli": "^7.13.14",
+    "@babel/core": "^7.13.15",
+    "@babel/preset-env": "^7.13.15",
+    "babel-preset-env": "^1.7.0",
+    "husky": "^6.0.0",
+    "install": "^0.13.0",
+    "jsonschema": "^1.4.0",
+    "nodemon": "^2.0.7",
+    "npm": "^7.9.0"
+  },
+  "engines": {
+    "node": "12.18.3",
+    "npm": "6.14.9"
+  },
+  "dependencies": {
+    "@babel/node": "^7.13.13",
+    "@babel/plugin-transform-regenerator": "^7.13.15",
+    "@babel/plugin-transform-runtime": "^7.13.15",
+    "@babel/register": "^7.13.14",
+    "@babel/runtime": "^7.13.10",
+    "axios": "^0.21.1",
+    "babel-core": "^6.26.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "debug": "^4.3.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-promise-router": "^4.1.0",
+    "express-validator": "^6.10.0",
+    "jsontoxml": "^1.0.1",
+    "libxmljs2": "^0.26.7",
+    "morgan": "^1.10.0",
+    "object-to-xml": "^2.0.0",
+    "pg": "^8.5.1",
+    "regenerator-runtime": "^0.13.7",
+    "sequelize": "^5.21.3",
+    "sequelize-cli": "^6.2.0",
+    "uuid": "^8.3.2",
+    "xml": "^1.0.1",
+    "xsd-schema-validator": "^0.6.0"
+  }
+}

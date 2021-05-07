@@ -1,0 +1,31 @@
+<h1>Homepage</h1>
+<div *ngIf="ecosystems">
+  <div *ngFor="let ecosystem of ecosystems">
+    <h3><u>Ecosystem {{ecosystem.location}}</u></h3>
+    <p><b>Address:</b> {{ecosystem.address}}</p>
+    <p><b>Post-code:</b> {{ecosystem.postcode}}</p>
+    <p><b>Location:</b> {{ecosystem.location}}</p>
+    <h3><u>Growbed harvest chart</u></h3>
+    <div>
+      <google-chart *ngIf="growbedChartData"
+                    [type]="chartType.LineChart"
+                    [data]="growbedChartData"
+                    [options]="options"
+                    [columns]="columnNames"
+                    [width]="800"
+                    [height]="400">
+      </google-chart>
+    </div>
+    <h3><u>Pond harvest chart</u></h3>
+    <div>
+      <google-chart *ngIf="pondChartData"
+                    [type]="chartType.LineChart"
+                    [data]="pondChartData"
+                    [options]="options"
+                    [columns]="columnNames"
+                    [width]="800"
+                    [height]="400">
+      </google-chart>
+    </div>
+  </div>
+</div>

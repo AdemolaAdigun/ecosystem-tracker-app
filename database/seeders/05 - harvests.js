@@ -11,7 +11,7 @@ export default {
                 id: uuidv4(),
                 growbedId,
                 harvestSize: 30000,
-                revenue: 45043,
+                revenue: 45243,
                 createdAt: new Date(),
                 updatedAt: new Date(),
             },
